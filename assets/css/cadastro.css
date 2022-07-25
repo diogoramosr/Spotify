@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'circular';
+    src: url("/assets/fonts/circular-std-medium-500.ttf") format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+ :root{
+    --font-padrao: 'circular';
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:var(--font-padrao) ;
+}
+
+
+/* Header */
+header > .nav-bar{
+    width: 100%;
+    color: white;
+    top: 0;
+    background-color: black;
+    overflow: hidden;
+}
+.center{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo{
+    height: 40px;
+    width: auto;
+}
+.center > .container-nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0;
+}
+.container-nav > ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.container-nav > ul li{
+    padding: 0 15px;
+    transition: all 300ms ease;
+    font-size: 15px;
+}
+.container-nav > ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+.container-nav > ul li a:hover{
+    color: #1ED760;
+    cursor: pointer;
+}
+
+/* Menu-mobile */
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+.nav-list.active{
+    transform: translateX(0);
+}
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+.nav-list li {
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    transition:  0.3s;
+}
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+} 
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Main */
+.cadastro .center{
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0px;
+}
+.center .cadastro-header{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.cadastro-header .img-container{    
+    margin: 0 auto 35px;
+    color: #000;
+    padding: 5px;
+}
+.img-container img{
+    height: 40px;
+    width: auto;
+}
+.cadastro-header h1{
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    line-height: 36px;
+}
+.container-btn1 > .link-btn1{
+    text-decoration: none;
+    color: #596268;
+}
+.link-btn1 .box-btn1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #596268;
+    border-radius: 50px;
+    padding: 7px 40px;
+}
+.box-btn1 .col-1 svg{
+    margin: 4.5px 0px 0px;
+}
+.box-btn1 .txt-btn1{
+    margin-left: 10px;
+    font-size: 17px;
+}
+.container-btn2 > .link-btn2{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+.link-btn2 .box-btn2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #384F81;
+    border-radius: 50px;
+    padding: 7px 40px;
+}
+.box-btn1 .txt-btn1{
+    margin-left: 10px;
+    font-size: 17px;
+}
+.btn-login .divisao{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+    color: #596268;
+}
+.divisao span{
+    display: table;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 0px auto 1em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.divisao span::before{
+    content: "";
+    display: table-cell;
+    position: relative;
+    top: 0.8em;
+    width: 42%;
+}
+.divisao span::after{
+    content: "";
+    display: table-cell;
+    position: relative;
+    top: 0.8em;
+    width: 42%;
+}
+.container-form{
+    padding: 0px 100px;
+}
+.container-form .center{
+    justify-content: center;
+    align-items: center;
+}
+.center form{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form .container-box {
+    width: 25rem;
+    padding: 10px;
+}
+.box-form label{
+    font-size: 15px;
+}
+.container-box input{
+  width: 100%;
+  padding: 14px;
+  margin: 3px 0px 3px 0px;
+  border: 1px solid #000;
+  opacity: 0.4;
+  border-radius: 3px;
+
+}
+.container-box input::placeholder{
+    font-size: 16px;
+    color: black;
+    margin-right: 100px;
+}
+.container-box p a{
+    font-size: 14px;
+    color: #1ED760;
+}
+.container-box p{
+    font-size: 14px;
+}
+.container-box .nascimento{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.nascimento .dia{
+    width: 25%;
+}
+.nascimento .mes{
+    width: 45%;
+    padding: 10px;
+}
+.mes select{
+    width: 160px;
+    color: #919496;
+    padding: 13px;
+}
+.nascimento .ano{
+    width: 27%;
+}
+.genero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.genero .box-genero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.genero .box-genero input{
+   width: 40px;
+}
+.newsletter{
+    width: 25rem;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.newsletter .box-newsletter{
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+.box-newsletter .box-atulizacao{
+    margin-bottom: 20px;
+}
+.box-atulizacao label{
+    font-size: 13px;
+    margin-left: 3px;
+}
+.box-atulizacao span{
+    color: #1ED760;
+    text-decoration: underline;
+}
+.box-privacidade{
+    text-align: center;
+    padding: 10px;
+    width: 30rem;
+    font-size: 12px;
+}
+.box-privacidade span{
+    text-decoration: underline;
+    color: #1ED760;
+}
+.box-privacidade button{
+    padding: 20px;
+    margin: 20px 0 10px 0;
+    border-radius: 50px;
+    width: 12rem;
+    border: none;
+    background-color: #1ED760;
+    font-size: 16px;
+    font-weight: bold;
+}
+.box-privacidade button:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+   .box-privacidade p{
+        width: 26rem;
+   }
+}
